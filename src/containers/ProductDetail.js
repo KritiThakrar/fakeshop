@@ -28,18 +28,18 @@ const ProductDetail = () =>
         return () => { dispatch(removeSelectedProduct());}
     }, [productId]);
     return (
-        <div className="container mx-auto px-40 py-10">
+        <div className="container mx-auto p-4 lg:px-40 lg:py-10">
             {Object.keys(product).length === 0 ?
                 (
                     <div>...Loading</div>
                 ) : (
                     <div className="max-w-sm w-full lg:max-w-full lg:flex">
                         <div className="border border-gray-400 lg:border-l lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-                            <div className="grid grid-cols-2 divide-x">
-                                <img className="rounded-lg h-fit pr-8" src={image} alt={title} />
+                            <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 lg:divide-x">
+                                <img className="rounded-lg h-fit pr-4" src={image} alt={title} />
                                 <div className='px-6'>
                                     <div className="mb-8 text-left">
-                                        <div className="text-gray-900 font-bold text-3xl mb-5 ">Can coffee make you a better developer?</div>
+                                        <div className="text-gray-900 font-bold text-lg lg:text-3xl mb-5 sm:mt-4">Can coffee make you a better developer?</div>
                                         <button type="button" class="mb-10 flex rounded-lg bg-sky-400 px-5 pb-2 pt-2.5 text-xl font-medium uppercase font-semibold text-white">
                                             $ {price}
                                         </button>
